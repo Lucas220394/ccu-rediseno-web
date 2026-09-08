@@ -25,15 +25,35 @@
       if (t) t.setAttribute("aria-expanded", "false");
     });
   }
+  var canHover = window.matchMedia("(hover: hover) and (min-width: 1001px)");
+  function setOpen(d, toggle, open) {
+    d.setAttribute("data-open", String(open));
+    toggle.setAttribute("aria-expanded", String(open));
+  }
   dropdowns.forEach(function (d) {
     var toggle = d.querySelector(".nav-toggle");
     if (!toggle) return;
+    var leaveTimer;
+
+    // Click: siempre disponible (táctil, teclado, y como alternancia en escritorio)
     toggle.addEventListener("click", function (e) {
       e.stopPropagation();
       var open = d.getAttribute("data-open") === "true";
       closeAll(d);
-      d.setAttribute("data-open", String(!open));
-      toggle.setAttribute("aria-expanded", String(!open));
+      setOpen(d, toggle, !open);
+    });
+
+    // Hover: abre/cierra sin clic en escritorio con puntero
+    d.addEventListener("mouseenter", function () {
+      if (!canHover.matches) return;
+      clearTimeout(leaveTimer);
+      closeAll(d);
+      setOpen(d, toggle, true);
+    });
+    d.addEventListener("mouseleave", function () {
+      if (!canHover.matches) return;
+      clearTimeout(leaveTimer);
+      leaveTimer = setTimeout(function () { setOpen(d, toggle, false); }, 180);
     });
   });
   doc.addEventListener("click", function () { closeAll(null); });
