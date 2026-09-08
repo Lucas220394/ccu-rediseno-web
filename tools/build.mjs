@@ -39,7 +39,7 @@ function head({ slug, title, description, image = "assets/img/hero-home.jpg" }) 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=5">
+<link rel="stylesheet" href="assets/css/styles.css?v=7">
 </head>
 <body>
 <a class="skip-link" href="#main">Saltar al contenido</a>`;
