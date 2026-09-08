@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /backend
+
+Sitemap: https://ccu.org.uy/sitemap.xml
