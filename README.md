@@ -94,7 +94,7 @@ Para la implementación conviene redirigir (301):
 **Rendimiento / técnica**
 - Sin jQuery, Bootstrap, SDK de Facebook ni Google Maps síncrono. **~4 KB de JS
   propio**, sin dependencias.
-- Logo: **SVG de <1 KB** en lugar del GIF animado de 240 KB.
+- Logo: se mantiene el **GIF animado original** (`logo_ani.gif`) en cabecera y pie. Queda además `logo-ccu.svg` (recreación liviana) disponible como alternativa/favicon.
 - Imágenes con `width`/`height`, `loading="lazy"` y recorte al tamaño de uso.
 - CSS con tokens (custom properties), un solo archivo.
 - Mapas: enlace a OpenStreetMap (sin API key). El mapa embebido del sitio actual
@@ -132,7 +132,7 @@ assets/
 Todas provienen del sitio actual (`ccu.org.uy/uploads/...`). Donde el sitio servía
 miniaturas (210–286 px) se descargó la variante `_f` (~1200 px) para mejor calidad.
 El hero de portada se recortó para quitarle el marco/marca de agua incrustados.
-El logo se rehízo como SVG a partir del GIF original (`logo_ani`).
+El logo del sitio es el GIF animado original (`logo_ani.gif`); `logo-ccu.svg` es una recreación vectorial liviana que queda como alternativa y se usa de favicon.
 
 ---
 
