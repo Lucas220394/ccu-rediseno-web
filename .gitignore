@@ -3,3 +3,6 @@ Thumbs.db
 /_*.html
 
 .vercel
+
+# video fuente sin procesar (pesado)
+/*.mp4

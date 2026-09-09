@@ -43,19 +43,19 @@ const INDEX = {
     "Desde 1961 el Centro Cooperativista Uruguayo acompaña a cooperativas de vivienda, rurales y de la economía social con promoción, capacitación y asistencia técnica en todo Uruguay.",
   hero: false,
   body: `
-  <section class="hero">
-    <div class="wrap hero__grid">
-      <div>
-        <p class="eyebrow">Centro Cooperativista Uruguayo · desde 1961</p>
-        <h1>Creando vínculos, uniendo esfuerzos</h1>
-        <p class="lead">Somos una organización no gubernamental que acompaña experiencias cooperativas y asociativas en todo el país: vivienda, medio rural y economía social y solidaria.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="habitat.html">Quiero formar una cooperativa de vivienda</a>
-          <a class="btn btn--ghost" href="sobre-ccu.html">Conocé al CCU</a>
-        </div>
-      </div>
-      <div class="hero__media">
-        <img src="assets/img/hero-home.jpg" alt="Vecinos y vecinas plantando árboles en un predio de una cooperativa de vivienda." width="790" height="526" fetchpriority="high">
+  <section class="hero hero--video">
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata"
+           poster="assets/img/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Centro Cooperativista Uruguayo · desde 1961</p>
+      <h1>Creando vínculos, uniendo esfuerzos</h1>
+      <p class="lead">Somos una organización no gubernamental que acompaña experiencias cooperativas y asociativas en todo el país: vivienda, medio rural y economía social y solidaria.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="habitat.html">Quiero formar una cooperativa de vivienda</a>
+        <a class="btn btn--light" href="sobre-ccu.html">Conocé al CCU</a>
       </div>
     </div>
   </section>
